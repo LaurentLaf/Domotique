@@ -1,4 +1,4 @@
-package tp4;
+package com.company.domotique.appareils;
 public class AppareilElectrique extends Appareil {
 
 	protected int iPuissance=0;

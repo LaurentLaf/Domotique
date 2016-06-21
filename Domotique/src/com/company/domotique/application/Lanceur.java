@@ -1,8 +1,11 @@
-package tp4;
+package com.company.domotique.application;
+
+import com.company.domotique.appareils.AppareilElectrique;
+import com.company.domotique.appareils.AppareilThermostate;
+
 public class Lanceur {
 	
 		public static void main(String [] args){
-		
 		
 		System.out.println("Bonjour");
 		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
@@ -14,14 +17,12 @@ public class Lanceur {
 		System.out.println(ordinateur);
 		System.out.println(chauffage);
 
-		
 		System.out.println("Marque :" + ordinateur.getMarque()
 					 	+ ", Modele : " + ordinateur.getModele());
 		System.out.println("Marque :" + chauffage.getMarque() 
 						+ ", Modele : " + chauffage.getModele()
 					    + ", Thermostat : " + chauffage.getValeurThermostat());
 
-		
 		//Mise en marche chauffage, reglage thermostat
 		
 		System.out.println(chauffage.getConsommation());
@@ -31,7 +32,6 @@ public class Lanceur {
 		System.out.println(chauffage.getConsommation());
 		System.out.println("Chauffage en marche ? : " + chauffage.getIsEnMarche()
 						+ ", Thermostat : " + chauffage.getValeurThermostat());
-		
 		
 		//Tentative d'incrementation du thermostat superieure � son thermostat maxi (12)
 		for (int i=0; i<12; i++) {
@@ -43,9 +43,7 @@ public class Lanceur {
 
 		//etc...................................
 
-
 	System.out.println("Au revoir!");
-				
 	}
 
 }

@@ -1,4 +1,4 @@
-package tp4;
+package com.company.domotique.appareils;
 public abstract class Appareil {
 
 	private String marque;
