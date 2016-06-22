@@ -42,9 +42,7 @@ public class AppareilElectrique extends Appareil {
    	      isEnMarche=false;
    }//arreter
 
-	/**
-	  retourne la consommation de l'appareil
-	*/
+
 	public int  getConsommation(){
 		  if (isEnMarche)
 		  		return iPuissance;
@@ -52,10 +50,12 @@ public class AppareilElectrique extends Appareil {
 		  		return 0;
 	}//getConsommation
 
-	
 	@Override
 	public String toString() {
-		return "AppareilElectrique [iPuissance=" + iPuissance + ", isEnMarche=" + isEnMarche + ", puissanceMaxWatts="
+		return super.toString() + "AppareilElectrique [iPuissance=" + iPuissance + ", isEnMarche=" + isEnMarche + ", puissanceMaxWatts="
 				+ puissanceMaxWatts + ", isSousTension=" + isSousTension + ", isBranche=" + isBranche + "]";
 	}
+
+	
+	
 }

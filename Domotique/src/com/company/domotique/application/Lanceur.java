@@ -1,6 +1,7 @@
 package com.company.domotique.application;
 
 import com.company.domotique.appareils.AppareilElectrique;
+import com.company.domotique.appareils.AppareilSecurise;
 import com.company.domotique.appareils.AppareilThermostate;
 
 public class Lanceur {
@@ -11,7 +12,19 @@ public class Lanceur {
 		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
 		AppareilThermostate chauffage = new AppareilThermostate("Philips","mod123",250,10,100);
 
-
+		AppareilSecurise MicroOnde = new AppareilSecurise("Philipse", "Modele1", 250, 10, 100, false);
+		AppareilSecurise MicroOnde2 = new AppareilSecurise("Philipse", "Modele2", 250, 10, 100, true);
+		
+		MicroOnde.demarrer();
+		MicroOnde2.demarrer();
+		
+		MicroOnde2.desenclencherSecurite();
+		MicroOnde2.demarrer();
+		
+		
+		System.out.println(MicroOnde);
+		System.out.println(MicroOnde2);
+		/*
 		// affichage de l'objet chauffage (methode toString appelee par defaut)
 		//Verification de l'instanciation
 		System.out.println(ordinateur);
@@ -44,6 +57,8 @@ public class Lanceur {
 		//etc...................................
 
 	System.out.println("Au revoir!");
+	*/
+	
 	}
 
 }
