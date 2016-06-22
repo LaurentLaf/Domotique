@@ -1,29 +1,35 @@
 package com.company.domotique.application;
 
-import java.util.Enumeration;
-
 import com.company.domotique.appareils.AppareilElectrique;
-import com.company.domotique.appareils.AppareilSecurise;
-import com.company.domotique.appareils.AppareilThermostate;
 import com.company.domotique.appareils.Bordereau;
 
 public class Lanceur {
 	
 		public static void main(String [] args){
 		
-			
-		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
-		AppareilElectrique ordinateur1 = new AppareilElectrique("ASUS","GX100",500);
+		/* Tests du TP 7
+		AppareilElectrique ordinateur = new AppareilElectrique("ASUS","GX102",500);
+		AppareilElectrique ordinateur1 = new AppareilElectrique("DELL","GX100",500);
+		AppareilElectrique ordinateur2 = new AppareilElectrique("ASUS","GX100",500);
+		AppareilElectrique ordinateur3 = new AppareilElectrique("ASUS","GX101",500);
 		
 		Bordereau bordereau = new Bordereau();
 		bordereau.add(ordinateur);
 		bordereau.add(ordinateur1);
+		bordereau.add(ordinateur2);
+		bordereau.add(ordinateur3);
 		
+		System.out.println("avant tri");
 		bordereau.afficher();
 		
+		bordereau.triCroissant();
+		System.out.println("après tri croissant");
+		bordereau.afficher();
 		
-		//System.out.println(bordereau);
-		
+		bordereau.triDecroissant();
+		System.out.println("après tri décroissant");
+		bordereau.afficher();
+		*/
 		
 		/*
 		System.out.println("Bonjour");

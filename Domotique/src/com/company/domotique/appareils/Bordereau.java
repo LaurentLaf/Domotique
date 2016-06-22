@@ -1,11 +1,13 @@
 package com.company.domotique.appareils;
 
-import java.util.Collection;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Vector;
 
 public class Bordereau extends Vector<AppareilElectrique> {
 
+	Vector<AppareilElectrique> enumAE;
+	
 	public Bordereau() {
 		
 	}
@@ -15,5 +17,11 @@ public class Bordereau extends Vector<AppareilElectrique> {
 			System.out.println(enumAE.nextElement());
 	}
 	
+	public void triCroissant() {
+		Collections.sort(this, new SortByCroissant());
+	}
 	
+	public void triDecroissant() {
+		Collections.sort(this, new SortByDecroissant());
+	}
 }
