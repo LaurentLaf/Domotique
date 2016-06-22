@@ -1,19 +1,37 @@
 package com.company.domotique.application;
 
+import java.util.Enumeration;
+
 import com.company.domotique.appareils.AppareilElectrique;
 import com.company.domotique.appareils.AppareilSecurise;
 import com.company.domotique.appareils.AppareilThermostate;
+import com.company.domotique.appareils.Bordereau;
 
 public class Lanceur {
 	
 		public static void main(String [] args){
 		
+			
+		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
+		AppareilElectrique ordinateur1 = new AppareilElectrique("ASUS","GX100",500);
+		
+		Bordereau bordereau = new Bordereau();
+		bordereau.add(ordinateur);
+		bordereau.add(ordinateur1);
+		
+		bordereau.afficher();
+		
+		
+		//System.out.println(bordereau);
+		
+		
+		/*
 		System.out.println("Bonjour");
 		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
 		AppareilThermostate chauffage = new AppareilThermostate("Philips","mod123",250,10,100);
 
-		AppareilSecurise MicroOnde = new AppareilSecurise("Philipse", "Modele1", 250, 10, 100, false);
-		AppareilSecurise MicroOnde2 = new AppareilSecurise("Philipse", "Modele2", 250, 10, 100, true);
+		AppareilSecurise MicroOnde = new AppareilSecurise("Philips", "Modele1", 250, 10, 100, false);
+		AppareilSecurise MicroOnde2 = new AppareilSecurise("Philips", "Modele2", 250, 10, 100, true);
 		
 		MicroOnde.demarrer();
 		MicroOnde2.demarrer();
@@ -24,6 +42,7 @@ public class Lanceur {
 		
 		System.out.println(MicroOnde);
 		System.out.println(MicroOnde2);
+		*/
 		/*
 		// affichage de l'objet chauffage (methode toString appelee par defaut)
 		//Verification de l'instanciation
