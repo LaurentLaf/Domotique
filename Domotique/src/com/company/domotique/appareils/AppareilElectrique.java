@@ -12,10 +12,9 @@ public class AppareilElectrique extends Appareil implements ConsommateurDeCouran
 	protected boolean isBranche = false;
 	
 	//Constructeur
-	public AppareilElectrique(String pMarque,String pModele, int pPuissance, int pPuissanceMaxWatt){
+	public AppareilElectrique(String pMarque,String pModele, int pPuissance){
 		super(pMarque, pModele);
 		iPuissance=pPuissance;
-		puissanceMaxWatts=pPuissanceMaxWatt;
 		isEnMarche=false;
 	}
 

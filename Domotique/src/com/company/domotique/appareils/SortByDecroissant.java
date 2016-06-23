@@ -21,7 +21,7 @@ public class SortByDecroissant implements Comparator<AppareilElectrique> {
 
 		res =  -(sNom1.compareTo(SNom2)); 
 
-		// Gestion du cas d'�galit�
+		// Gestion du cas d'égalité
 		if (res == 0) {
 			sNom1=pObjet1.getModele();
 			SNom2=pObjet2.getModele();

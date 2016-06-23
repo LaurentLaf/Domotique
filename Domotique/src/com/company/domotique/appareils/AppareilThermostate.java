@@ -43,7 +43,7 @@ public class AppareilThermostate extends AppareilElectrique {
 
 	//Constructeur
 	public AppareilThermostate(String pMarque, String pModele, int pPuissance, int pValeurThermostatMax, int pIncPuissance) {
-		super(pMarque, pModele, pPuissance, pIncPuissance);
+		super(pMarque, pModele, pPuissance);
 		this.valeurThermostatMax=pValeurThermostatMax;
 		this.incPuissance=pIncPuissance;
 		this.valeurThermostat=0;
@@ -55,6 +55,12 @@ public class AppareilThermostate extends AppareilElectrique {
 	public void incrementerThermostat() {
 		if (valeurThermostat < valeurThermostatMax) {
 			this.valeurThermostat++;
+		}
+	}
+	
+	public void decrementerThermostat() {
+		if (valeurThermostat > 0) {
+			this.valeurThermostat--;
 		}
 	}
 	

@@ -1,18 +1,19 @@
 package com.company.domotique.application;
 
 import com.company.domotique.appareils.AppareilElectrique;
-import com.company.domotique.appareils.Bordereau;
+import com.company.domotique.inter.ConsommateurDeCourant;
+import com.company.domotique.maison.Compteur;
 
 public class Lanceur {
 	
 		public static void main(String [] args){
 		
-		/*
+		
 		Compteur compteur = new Compteur("BOSH", "X1135", 100, 1200);
 		
-		ConsommateurDeCourant ordinateur = new AppareilElectrique("A","GX102",500,500);
-		ConsommateurDeCourant ordinateur1 = new AppareilElectrique("B","GX102",500,500);
-		ConsommateurDeCourant ordinateur2 = new AppareilElectrique("C","GX102",500,500);
+		ConsommateurDeCourant ordinateur = new AppareilElectrique("A","GX102",500);
+		ConsommateurDeCourant ordinateur1 = new AppareilElectrique("B","GX102",500);
+		ConsommateurDeCourant ordinateur2 = new AppareilElectrique("C","GX102",500);
 		
 		((AppareilElectrique) ordinateur).demarrer();
 		((AppareilElectrique) ordinateur1).demarrer();
@@ -27,14 +28,14 @@ public class Lanceur {
 		System.out.println(((AppareilElectrique) ordinateur2).getIsEnMarche());
 		
 		System.out.println();
-		*/
 		
 		
+		/*
 		//Tests du TP 7
-		AppareilElectrique ordinateur = new AppareilElectrique("ASUS","GX102",500,500);
-		AppareilElectrique ordinateur1 = new AppareilElectrique("DELL","GX100",500,500);
-		AppareilElectrique ordinateur2 = new AppareilElectrique("ASUS","GX100",500,500);
-		AppareilElectrique ordinateur3 = new AppareilElectrique("ASUS","GX101",500,500);
+		AppareilElectrique ordinateur = new AppareilElectrique("ASUS","GX102",500);
+		AppareilElectrique ordinateur1 = new AppareilElectrique("DELL","GX100",500);
+		AppareilElectrique ordinateur2 = new AppareilElectrique("ASUS","GX100",500);
+		AppareilElectrique ordinateur3 = new AppareilElectrique("ASUS","GX101",500);
 		
 		Bordereau bordereau = new Bordereau();
 		bordereau.add(ordinateur);
@@ -52,9 +53,9 @@ public class Lanceur {
 		bordereau.triDecroissant();
 		System.out.println("apr�s tri d�croissant");
 		bordereau.afficher();
+		*/
 		
-		
-		/* 
+		/*
 		System.out.println("Bonjour");
 		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
 		AppareilThermostate chauffage = new AppareilThermostate("Philips","mod123",250,10,100);

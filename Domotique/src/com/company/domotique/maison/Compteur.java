@@ -18,10 +18,16 @@ public class Compteur extends AppareilElectrique implements ProducteurDeCourant 
 	public int getPuissanceInstantanee() {
 		return puissanceInstantanee;
 	}
+	
+	public int getPuissanceMaxWatts() {
+		return puissanceMaxWatts;
+	}
+	
 
 	public Compteur(String pMarque, String pModele, int pPuissance, int pPuissanceMaxWatt) {
-		super(pMarque, pModele, pPuissance, pPuissanceMaxWatt);
+		super(pMarque, pModele, pPuissance);
 		this.demarrer();
+		super.puissanceMaxWatts=pPuissanceMaxWatt;
 		puissanceInstantanee=this.getConsommation();
 		mesAppareilsBranches = new ArrayList<ConsommateurDeCourant>();
 	}
