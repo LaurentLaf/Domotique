@@ -22,15 +22,18 @@ public class PanneauThermostat extends PanneauAppareil implements ActionListener
 
 		//TODO creer  bouton diminuer
 		//...
+		btnDiminuerThermostat=new JButton("-");
 		add(btnDiminuerThermostat);
 
 		//TODO creer label Thermostat
-		//...		
+		//...	
+		lblThermostat=new JLabel("00");
 		add(lblThermostat);
 
 		
 		//TODO creer  bouton diminuer
 		//...
+		btnAugmenterThermostat=new JButton("+");
 		add(btnAugmenterThermostat);
 	}
 
