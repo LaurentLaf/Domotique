@@ -32,7 +32,7 @@ public class PanneauAppareil
 
 	public PanneauAppareil(AppareilElectrique pAppareil, PanneauCompteur pPanoC){
 		super(new FlowLayout(FlowLayout.LEFT));
-		// On note l'appareil reliï¿½
+		// On note l'appareil relié
 		appareil=pAppareil;
 		lePanoCompteur = pPanoC;
 
@@ -40,14 +40,14 @@ public class PanneauAppareil
 		setPreferredSize(new Dimension(500,40));
 		setBackground(new Color(210,210,210));
 		setForeground(Color.black);
-		// On prend marque et modï¿½le comme affichage
+		// On prend marque et modèle comme affichage
 		lblPresentation=new JLabel( appareil.getMarque()+" "
 												 +appareil.getModele());
 		lblPresentation.setPreferredSize(new Dimension(150,30));
 		add(lblPresentation);
 
-		btnDemarrer = new JButton("Dï¿½marrer");
-		// On dï¿½clare cette classe comme ï¿½coutant les ï¿½vï¿½nements du bouton
+		btnDemarrer = new JButton("Démarrer");
+		// On déclare cette classe comme écoutant les évènements du bouton
 		btnDemarrer.addActionListener(this);
 		btnDemarrer.setEnabled(true);
 		add(btnDemarrer);
@@ -55,7 +55,7 @@ public class PanneauAppareil
 		onOff.setBackground(Color.red);
 		add(onOff);
 
-		btnArreter = new JButton("Arrï¿½ter");
+		btnArreter = new JButton("Arrêter");
 		btnArreter.setOpaque(true);
 		btnArreter.addActionListener(this);
 		btnArreter.setEnabled(false);

@@ -20,7 +20,8 @@ public class Lanceur09 {
 		AppareilThermostate unMicroOnde = new AppareilThermostate("Philips","mod123",250,10,100);
 		Compteur unCompteurEDF = new Compteur("BOSH", "X1135", 100, 1250);
 
-		
+		unOrdinateur.demarrer();;
+		unMicroOnde.demarrer();;
 		unCompteurEDF.brancher(unOrdinateur);
 		unCompteurEDF.brancher(unMicroOnde);
 			
