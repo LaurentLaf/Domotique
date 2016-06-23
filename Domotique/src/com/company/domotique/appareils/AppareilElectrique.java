@@ -1,5 +1,8 @@
 package com.company.domotique.appareils;
-public class AppareilElectrique extends Appareil {
+
+import com.company.domotique.inter.ConsommateurDeCourant;
+
+public class AppareilElectrique extends Appareil implements ConsommateurDeCourant {
 
 	protected int iPuissance=0;
 	protected boolean isEnMarche=false;
@@ -9,9 +12,10 @@ public class AppareilElectrique extends Appareil {
 	protected boolean isBranche = false;
 	
 	//Constructeur
-	public AppareilElectrique(String pMarque,String pModele, int pPuissance){
+	public AppareilElectrique(String pMarque,String pModele, int pPuissance, int pPuissanceMaxWatt){
 		super(pMarque, pModele);
 		iPuissance=pPuissance;
+		puissanceMaxWatts=pPuissanceMaxWatt;
 		isEnMarche=false;
 	}
 

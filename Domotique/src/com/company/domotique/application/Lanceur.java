@@ -7,11 +7,34 @@ public class Lanceur {
 	
 		public static void main(String [] args){
 		
-		/* Tests du TP 7
-		AppareilElectrique ordinateur = new AppareilElectrique("ASUS","GX102",500);
-		AppareilElectrique ordinateur1 = new AppareilElectrique("DELL","GX100",500);
-		AppareilElectrique ordinateur2 = new AppareilElectrique("ASUS","GX100",500);
-		AppareilElectrique ordinateur3 = new AppareilElectrique("ASUS","GX101",500);
+		/*
+		Compteur compteur = new Compteur("BOSH", "X1135", 100, 1200);
+		
+		ConsommateurDeCourant ordinateur = new AppareilElectrique("A","GX102",500,500);
+		ConsommateurDeCourant ordinateur1 = new AppareilElectrique("B","GX102",500,500);
+		ConsommateurDeCourant ordinateur2 = new AppareilElectrique("C","GX102",500,500);
+		
+		((AppareilElectrique) ordinateur).demarrer();
+		((AppareilElectrique) ordinateur1).demarrer();
+		((AppareilElectrique) ordinateur2).demarrer();
+		
+		compteur.brancher(ordinateur);
+		compteur.brancher(ordinateur1);
+		compteur.brancher(ordinateur2);
+		
+		System.out.println(((AppareilElectrique) ordinateur).getIsEnMarche());
+		System.out.println(((AppareilElectrique) ordinateur1).getIsEnMarche());
+		System.out.println(((AppareilElectrique) ordinateur2).getIsEnMarche());
+		
+		System.out.println();
+		*/
+		
+		
+		//Tests du TP 7
+		AppareilElectrique ordinateur = new AppareilElectrique("ASUS","GX102",500,500);
+		AppareilElectrique ordinateur1 = new AppareilElectrique("DELL","GX100",500,500);
+		AppareilElectrique ordinateur2 = new AppareilElectrique("ASUS","GX100",500,500);
+		AppareilElectrique ordinateur3 = new AppareilElectrique("ASUS","GX101",500,500);
 		
 		Bordereau bordereau = new Bordereau();
 		bordereau.add(ordinateur);
@@ -23,15 +46,15 @@ public class Lanceur {
 		bordereau.afficher();
 		
 		bordereau.triCroissant();
-		System.out.println("après tri croissant");
+		System.out.println("aprï¿½s tri croissant");
 		bordereau.afficher();
 		
 		bordereau.triDecroissant();
-		System.out.println("après tri décroissant");
+		System.out.println("aprï¿½s tri dï¿½croissant");
 		bordereau.afficher();
-		*/
 		
-		/*
+		
+		/* 
 		System.out.println("Bonjour");
 		AppareilElectrique ordinateur = new AppareilElectrique("DELL","GX100",500);
 		AppareilThermostate chauffage = new AppareilThermostate("Philips","mod123",250,10,100);
@@ -49,6 +72,7 @@ public class Lanceur {
 		System.out.println(MicroOnde);
 		System.out.println(MicroOnde2);
 		*/
+		
 		/*
 		// affichage de l'objet chauffage (methode toString appelee par defaut)
 		//Verification de l'instanciation

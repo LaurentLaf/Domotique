@@ -6,6 +6,11 @@ import java.util.Vector;
 
 public class Bordereau extends Vector<AppareilElectrique> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3772384340400907577L;
+	
 	Vector<AppareilElectrique> enumAE;
 	
 	public Bordereau() {
