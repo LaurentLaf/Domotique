@@ -48,9 +48,9 @@ public class PanneauCompteur
 		
 		
 		// Affichage de la consommation
-		lblConso=new JLabel("    ");
+		lblConso=new JLabel(Integer.toString(compteur.getPuissanceInstantanee()));
 		lblConso.setPreferredSize(new Dimension(100,30));
-		lblConso.setForeground(Color.white);
+		lblConso.setForeground(Color.black);
 		lblConso.setOpaque(true);
 		add(lblConso);
 

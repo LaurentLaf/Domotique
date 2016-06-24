@@ -16,12 +16,13 @@ public class Lanceur09 {
 		ArrayList alAppThermos = new ArrayList();
 		
 
-		AppareilElectrique unOrdinateur = new AppareilElectrique("DELL","GX100",500);
+		AppareilElectrique unOrdinateur = new AppareilElectrique("DELL","GX100",501);
 		AppareilThermostate unMicroOnde = new AppareilThermostate("Philips","mod123",250,10,100);
 		Compteur unCompteurEDF = new Compteur("BOSH", "X1135", 100, 1250);
+		//System.out.println(unCompteurEDF.getPuissanceInstantanee());
 
-		unOrdinateur.demarrer();;
-		unMicroOnde.demarrer();;
+		//unOrdinateur.demarrer();
+		//unMicroOnde.demarrer();
 		unCompteurEDF.brancher(unOrdinateur);
 		unCompteurEDF.brancher(unMicroOnde);
 			

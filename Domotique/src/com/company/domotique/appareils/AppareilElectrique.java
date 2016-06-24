@@ -45,7 +45,6 @@ public class AppareilElectrique extends Appareil implements ConsommateurDeCouran
    	      isEnMarche=false;
    }//arreter
 
-
 	public int  getConsommation(){
 		  if (isEnMarche)
 		  		return iPuissance;
