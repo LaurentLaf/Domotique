@@ -31,16 +31,13 @@ public class AppareilElectrique extends Appareil implements ConsommateurDeCouran
 			return isEnMarche;
 	} // get
 
-	/**
-		 met l'appareil en marche
-	*/
+	/**	 met l'appareil en marche */
     public void demarrer() {
 	   isEnMarche=true;
+	   
     }//demarrer
 
-   /**
-    arrete l'appareil
-   */
+   /** arrete l'appareil */
    public void arreter() {
    	      isEnMarche=false;
    }//arreter

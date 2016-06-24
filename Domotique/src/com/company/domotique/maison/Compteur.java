@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import com.company.domotique.appareils.AppareilElectrique;
+import com.company.domotique.exeptions.CompteurADisjoncterException;
 import com.company.domotique.inter.ConsommateurDeCourant;
 import com.company.domotique.inter.ProducteurDeCourant;
 
@@ -12,7 +13,6 @@ public class Compteur extends AppareilElectrique implements ProducteurDeCourant 
 
 	private Collection<ConsommateurDeCourant> mesAppareilsBranches;
 	private int puissanceInstantanee = 0;
-	
 	
 
 	public int getPuissanceInstantanee() {
@@ -33,14 +33,14 @@ public class Compteur extends AppareilElectrique implements ProducteurDeCourant 
 	}
 
 	@Override
-	public void brancher(ConsommateurDeCourant CC) {
+	public void brancher(ConsommateurDeCourant CC) throws CompteurADisjoncterException {
 		if ( (puissanceInstantanee+CC.getConsommation()) < puissanceMaxWatts) {
 			mesAppareilsBranches.add(CC);
 			puissanceInstantanee += (CC.getConsommation());
 		}
 		else {
-			System.out.println("Le CC : "+((AppareilElectrique) CC).getMarque()+" n'a pas été ajouté et le compteur a disjoncté");
 			disjoncter();
+			throw new CompteurADisjoncterException(this, puissanceInstantanee+CC.getConsommation());
 		}
 	}
 
@@ -57,6 +57,4 @@ public class Compteur extends AppareilElectrique implements ProducteurDeCourant 
 		return "Compteur [mesAppareilsBranches=" + mesAppareilsBranches + ", puissanceInstantanee="
 				+ puissanceInstantanee + "]";
 	}
-	
-	
 }

@@ -23,8 +23,8 @@ public class Lanceur09 {
 
 		//unOrdinateur.demarrer();
 		//unMicroOnde.demarrer();
-		unCompteurEDF.brancher(unOrdinateur);
-		unCompteurEDF.brancher(unMicroOnde);
+		//unCompteurEDF.brancher(unOrdinateur);
+		//unCompteurEDF.brancher(unMicroOnde);
 			
 		CadreGeneral monInterface = new CadreGeneral(unOrdinateur, unMicroOnde, unCompteurEDF);
 	}

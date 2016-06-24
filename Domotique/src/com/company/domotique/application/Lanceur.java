@@ -1,12 +1,13 @@
 package com.company.domotique.application;
 
 import com.company.domotique.appareils.AppareilElectrique;
+import com.company.domotique.exeptions.CompteurADisjoncterException;
 import com.company.domotique.inter.ConsommateurDeCourant;
 import com.company.domotique.maison.Compteur;
 
 public class Lanceur {
 	
-		public static void main(String [] args){
+		public static void main(String [] args) throws CompteurADisjoncterException{
 		
 		
 		Compteur compteur = new Compteur("BOSH", "X1135", 100, 1200);
@@ -19,15 +20,19 @@ public class Lanceur {
 		((AppareilElectrique) ordinateur1).demarrer();
 		((AppareilElectrique) ordinateur2).demarrer();
 		
-		compteur.brancher(ordinateur);
-		compteur.brancher(ordinateur1);
-		compteur.brancher(ordinateur2);
+		try {
+			compteur.brancher(ordinateur);
+			compteur.brancher(ordinateur1);
+			compteur.brancher(ordinateur2);
+		} catch (CompteurADisjoncterException e) {
+			e.afficherErreur();
+		}
 		
-		System.out.println(((AppareilElectrique) ordinateur).getIsEnMarche());
-		System.out.println(((AppareilElectrique) ordinateur1).getIsEnMarche());
-		System.out.println(((AppareilElectrique) ordinateur2).getIsEnMarche());
+		//System.out.println(((AppareilElectrique) ordinateur).getIsEnMarche());
+		//System.out.println(((AppareilElectrique) ordinateur1).getIsEnMarche());
+		//System.out.println(((AppareilElectrique) ordinateur2).getIsEnMarche());
 		
-		System.out.println();
+		//System.out.println(compteur);
 		
 		
 		/*

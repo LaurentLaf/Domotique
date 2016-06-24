@@ -46,7 +46,7 @@ public class PanneauAppareil
 		lblPresentation.setPreferredSize(new Dimension(150,30));
 		add(lblPresentation);
 
-		btnDemarrer = new JButton("D�marrer");
+		btnDemarrer = new JButton("Démarrer");
 		// On d�clare cette classe comme �coutant les �v�nements du bouton
 		btnDemarrer.addActionListener(this);
 		btnDemarrer.setEnabled(true);
@@ -55,7 +55,7 @@ public class PanneauAppareil
 		onOff.setBackground(Color.red);
 		add(onOff);
 
-		btnArreter = new JButton("Arr�ter");
+		btnArreter = new JButton("Arrêter");
 		btnArreter.setOpaque(true);
 		btnArreter.addActionListener(this);
 		btnArreter.setEnabled(false);

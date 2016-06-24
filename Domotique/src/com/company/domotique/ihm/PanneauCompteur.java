@@ -20,6 +20,8 @@ public class PanneauCompteur
 	private JLabel  lblPresentation;
 	private JLabel  lblConso;
 	private JButton btnConso;
+	
+	private JLabel  labCpt;
 
 	//Reference sur les panneaux des appareils
 	//recuperees grace a la methode abonnement de cette classe
@@ -53,7 +55,14 @@ public class PanneauCompteur
 		lblConso.setForeground(Color.black);
 		lblConso.setOpaque(true);
 		add(lblConso);
-
+		
+		
+		labCpt=new Horloge().labCpt;
+		labCpt.setPreferredSize(new Dimension(100,30));
+		labCpt.setForeground(Color.black);
+		labCpt.setOpaque(true);
+		add(labCpt);
+		;
 	}
 
 	public void majConso() {
